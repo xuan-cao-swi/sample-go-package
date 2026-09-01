@@ -1,4 +1,4 @@
-module github.com/xuancao/zibble
+module github.com/xuan-cao-swi/sample-go-package
 
 go 1.21
 

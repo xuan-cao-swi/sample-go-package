@@ -4,7 +4,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/xuancao/zibble"
+	zibble "github.com/xuan-cao-swi/sample-go-package"
 )
 
 func main() {
