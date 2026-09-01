@@ -30,3 +30,14 @@ func TestShout(t *testing.T) {
 		t.Errorf("Shout(%q) = %q, want %q", "hi", got, want)
 	}
 }
+
+func TestNewID(t *testing.T) {
+	a := NewID()
+	b := NewID()
+	if a == "" || b == "" {
+		t.Fatal("NewID() returned an empty string")
+	}
+	if a == b {
+		t.Errorf("NewID() returned the same value twice: %q", a)
+	}
+}

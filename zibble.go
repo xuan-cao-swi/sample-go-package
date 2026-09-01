@@ -1,7 +1,11 @@
 // Package zibble provides small string utility helpers.
 package zibble
 
-import "strings"
+import (
+	"strings"
+
+	"github.com/google/uuid"
+)
 
 // Reverse returns s with its characters in reverse order.
 func Reverse(s string) string {
@@ -22,4 +26,9 @@ func IsPalindrome(s string) bool {
 // Shout uppercases s and appends an exclamation mark.
 func Shout(s string) string {
 	return strings.ToUpper(s) + "!"
+}
+
+// NewID returns a new random UUID string.
+func NewID() string {
+	return uuid.NewString()
 }

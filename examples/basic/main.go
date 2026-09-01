@@ -11,4 +11,5 @@ func main() {
 	fmt.Println(zibble.Reverse("hello"))
 	fmt.Println(zibble.IsPalindrome("racecar"))
 	fmt.Println(zibble.Shout("hi"))
+	fmt.Println(zibble.NewID())
 }
