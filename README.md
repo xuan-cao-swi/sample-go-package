@@ -3,7 +3,7 @@
 `zibble` is the root Go module:
 
 ```text
-github.com/xuancao/zibble
+github.com/xuan-cao-swi/sample-go-package
 ```
 
 ## Release checklist
@@ -25,7 +25,7 @@ github.com/xuancao/zibble
 	git push origin v0.2.0
 	```
 
-6. Create a GitHub Release for the tag at <https://github.com/xuancao/zibble/releases/new>.
+6. Create a GitHub Release for the tag at <https://github.com/xuan-cao-swi/sample-go-package/releases/new>.
 
 The Go toolchain uses the Git tag as the module version. `Version` is a package-level release marker and should stay aligned with the tag.
 
@@ -33,7 +33,7 @@ The Go toolchain uses the Git tag as the module version. `Version` is a package-
 
 `swozibble` is a separate module under `instrumentation/` and must be tagged independently. Keep its release version aligned with the root `zibble` release.
 
-Publish the root `zibble` tag first. Then update the `require github.com/xuancao/zibble` version in `instrumentation/github.com/xuancao/zibble/swozibble/go.mod` to the new root version and remove any local `replace` directive before releasing `swozibble`.
+Publish the root `zibble` tag first. Then update the `require github.com/xuan-cao-swi/sample-go-package` version in `instrumentation/github.com/xuancao/zibble/swozibble/go.mod` to the new root version and remove any local `replace` directive before releasing `swozibble`.
 
 Before tagging it, run the checks from its directory:
 
@@ -46,7 +46,7 @@ go mod tidy
 While the root module is only available in the local checkout, use a temporary replacement before running those commands:
 
 ```shell
-go mod edit -replace github.com/xuancao/zibble=../../../../..
+go mod edit -replace github.com/xuan-cao-swi/sample-go-package=../../../../..
 go mod tidy
 go test ./...
 ```
@@ -63,7 +63,7 @@ git push origin instrumentation/github.com/xuancao/zibble/swozibble/v0.2.0
 Clients can then add the integration with:
 
 ```shell
-go get github.com/xuancao/zibble/instrumentation/github.com/xuancao/zibble/swozibble@v0.2.0
+	go get github.com/xuan-cao-swi/sample-go-package/instrumentation/github.com/xuancao/zibble/swozibble@v0.2.0
 ```
 
 ## Major version changes
